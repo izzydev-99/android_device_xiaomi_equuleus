@@ -6,3 +6,6 @@ persist.camera.sat.fallback.lux.d=50
 
 # Display
 ro.surface_flinger.has_wide_color_display=true
+
+# Face unlock: use the OV9282 IR camera (camera id 5)
+ro.face.sense_service.camera_id=5
