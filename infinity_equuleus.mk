@@ -2,6 +2,7 @@
 # Project Infinity X 3.12 / Android 16 for Xiaomi Mi 8 Pro.
 
 INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := Izzydev
 TARGET_HAS_UDFPS := true
 WITH_GAPPS ?= true
 
