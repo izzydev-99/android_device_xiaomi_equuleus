@@ -20,3 +20,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Xiaomi/equuleus/equuleus:8.1.0/OPM1.171019.026/V9.6.6.0.OECCNFD:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Google Phone and Google Messages replace the stock Dialer and messaging
+# (GApps builds only; prebuilts come from vendor/pixel/gms).
+ifeq ($(WITH_GAPPS),true)
+PRODUCT_PACKAGES += \
+    GoogleDialer \
+    PrebuiltBugle \
+    com.google.android.dialer.support
+
+PRODUCT_COPY_FILES += \
+    vendor/pixel/gms/common/proprietary/product/etc/permissions/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.dialer.support.xml
+endif
